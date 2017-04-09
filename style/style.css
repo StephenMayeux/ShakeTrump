@@ -1,3 +1,11 @@
+html, body {
+  margin: 25px 0;
+}
+
+div {
+  text-align: center;
+}
+
 @-webkit-keyframes shakeit {
   0% {
     transform: translate(5px, 4px) rotate(0deg);

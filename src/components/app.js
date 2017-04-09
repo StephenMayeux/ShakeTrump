@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Draggable from 'react-draggable';
+import numeral from 'numeral';
 const socket = io.connect();
 
 export default class App extends Component {
@@ -26,7 +27,9 @@ export default class App extends Component {
     let { counter } = this.state;
     counter++;
     this.setState({ counter });
-    socket.emit('incrementCounter', counter);
+    UserInfo.getInfo(user => {
+      socket.emit('incrementCounter', { counter, user });
+    }, err => console.error(err));
   }
 
   onServerIncrement({ counter }) {
@@ -61,7 +64,7 @@ export default class App extends Component {
               />
             </div>
           </Draggable>
-          <h2>{`So far, Trump has been shaken ${this.state.counter} times.`}</h2>
+          <h2>{`So far, Trump has been shaken ${numeral(this.state.counter).format('0,0')} times.`}</h2>
         </div>
       </div>
     );
