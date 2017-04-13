@@ -1,9 +1,9 @@
 {
-  "name": "redux-simple-starter",
+  "name": "shake-trump",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Vigorously shake Donald Trump",
   "main": "server.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "repository": "git remote add origin https://github.com/StephenMayeux/ShakeTrump.git",
   "engines": {
     "node": "7.3.0",
     "npm": "3.10.10"
@@ -12,7 +12,7 @@
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "server": "webpack && nodemon server.js"
   },
-  "author": "",
+  "author": "Stephen Mayeux",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.2.1",
